@@ -6,30 +6,31 @@
 /*********************************************************************************************************************\
                                                   standart settings
 \*********************************************************************************************************************/
-// *,
-// *:focus {
-//   outline: none !important;
-// }
-// a,
-// a:hover,
-// button,
-// button:hover {
-//   text-decoration: none;
-//   cursor: pointer;
-// }
-// body {
-//   position: relative;
-//   overflow-x: hidden;
-//   min-height: 100vh;
-// }
-// p {
-//   @include text("Circe", 18px, bold, normal, left, #393939, none);
-// }
-// img {
-//   object-fit: cover;
-//   vertical-align: middle;
-// }
-
+*,
+*:focus {
+  outline: none !important;
+}
+a,
+a:hover,
+button,
+button:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+body {
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+p {
+  @include text("ProbaPro", 18px, bold, normal, left, #393939, none);
+  font-stretch: normal;
+  letter-spacing: normal;
+  line-height: 1.2;
+}
+img {
+  vertical-align: middle;
+}
 // /** ----- Chrome - scroll ----- **/
 // body::-webkit-scrollbar {
 //   width: 15px;
@@ -45,36 +46,39 @@
 //   background: #be35ff;
 //   // border-radius: 20px;
 // }
-
-// /** ----- Slider inside bootstrap4 tabs ----- **/
-// .tab-content > .tab-pane,
-// .pill-content > .pill-pane {
-//   display: block; /* undo display:none */
-//   height: 0; /* height:0 is also invisible */
-//   overflow: hidden; /* no-overflow */
-// }
-// .tab-content > .active,
-// .pill-content > .active {
-//   height: 370px; /* let the content decide it  */
-// }
-
-// /** ----- Slick-dots: images ----- **/
-// .slick-dots li img:nth-child(1) {
-//   display: block;
-// }
-// .slick-dots li img:nth-child(2) {
-//   display: none;
-// }
-// .slick-dots li.slick-active img:nth-child(1) {
-//   display: none;
-// }
-// .slick-dots li.slick-active img:nth-child(2) {
-//   display: block;
-// }
-
+/*********************************************************************************************************************\
+                                                  Keyframes
+\*********************************************************************************************************************/
+@keyframes logo__progress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 268px;
+  }
+}
+@keyframes logo__skip-up {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-370px);
+  }
+}
+@keyframes baner__skip-up {
+  0% {
+    height: 100vh;
+  }
+  100% {
+    height: 0;
+  }
+}
 /*********************************************************************************************************************\
                                                   reusable components
 \*********************************************************************************************************************/
+.hidden {
+  display: none !important;
+}
 // .wrapper {
 //   max-width: 1160px;
 //   margin: 0 auto;
@@ -82,6 +86,81 @@
 //     max-width: 90%;
 //   }
 // }
+/*********************************************************************************************************************\
+                                                  Loader
+\*********************************************************************************************************************/
+.loader {
+  width: 100vw;
+  height: 100vh;
+  background: url(../assets/loader_plate_2-4k.jpg) 50% no-repeat;
+  background-size: cover;
+  @include displayFlex(flex, column, 0, center);
+  animation: baner__skip-up 1.2s linear 4s forwards;
+}
+.loader__block-wrapper {
+  width: 70%;
+  position: relative;
+  padding-top: 77px;
+  animation: logo__skip-up 0.6s linear 4s forwards;
+  @media (max-width: 480px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+.loader__logo {
+  width: 268px;
+  height: 232px;
+  @include displayFlex(flex, column, space-between, center);
+}
+.loader__image {
+  height: 120px;
+}
+.loader__wrapper {
+  width: 268px;
+  height: 60px;
+  @include displayFlex(flex, column, space-between, 0);
+}
+.loader__snail {
+  display: flex;
+  flex-direction: column;
+}
+.loader__snail-running {
+  width: 250px;
+  height: 35px;
+  margin-left: 20px;
+}
+.loader__snail-running-wrapper {
+  left: 0;
+  width: 0;
+  height: 26px;
+  animation: logo__progress 4s ease-in-out forwards;
+}
+.loader__snail-running-logo {
+  float: right;
+  width: 35px;
+  height: 26px;
+}
+.loader__loading {
+  width: 74px;
+  height: 18px;
+  opacity: 0.6;
+  @include text("ProbaPro", 16px, normal, normal, left, #ffffff, 0);
+  font-stretch: normal;
+  line-height: 1.13;
+  letter-spacing: normal;
+}
+.loader__snail-wrapper {
+  width: 267px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.75);
+}
+.loader__snail-wrapper-progress {
+  width: 0;
+  height: 2px;
+  left: 0;
+  background: #f4b43b;
+  animation: logo__progress 4s ease-in-out forwards;
+}
 /*********************************************************************************************************************\
                                                   Header
 \*********************************************************************************************************************/

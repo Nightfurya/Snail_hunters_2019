@@ -1,0 +1,87 @@
+@import "_fonts-ProbaPro.scss";
+@import "_mixins-fonts.scss";
+@import "normalize";
+@import "slick";
+
+/*********************************************************************************************************************\
+                                                  standart settings
+\*********************************************************************************************************************/
+// *,
+// *:focus {
+//   outline: none !important;
+// }
+// a,
+// a:hover,
+// button,
+// button:hover {
+//   text-decoration: none;
+//   cursor: pointer;
+// }
+// body {
+//   position: relative;
+//   overflow-x: hidden;
+//   min-height: 100vh;
+// }
+// p {
+//   @include text("Circe", 18px, bold, normal, left, #393939, none);
+// }
+// img {
+//   object-fit: cover;
+//   vertical-align: middle;
+// }
+
+// /** ----- Chrome - scroll ----- **/
+// body::-webkit-scrollbar {
+//   width: 15px;
+//   cursor: pointer;
+// }
+// body::-webkit-scrollbar-thumb {
+//   //scroll
+//   background: #58c44a;
+//   border-radius: 20px;
+// }
+// body::-webkit-scrollbar-track {
+//   // scroll background
+//   background: #be35ff;
+//   // border-radius: 20px;
+// }
+
+// /** ----- Slider inside bootstrap4 tabs ----- **/
+// .tab-content > .tab-pane,
+// .pill-content > .pill-pane {
+//   display: block; /* undo display:none */
+//   height: 0; /* height:0 is also invisible */
+//   overflow: hidden; /* no-overflow */
+// }
+// .tab-content > .active,
+// .pill-content > .active {
+//   height: 370px; /* let the content decide it  */
+// }
+
+// /** ----- Slick-dots: images ----- **/
+// .slick-dots li img:nth-child(1) {
+//   display: block;
+// }
+// .slick-dots li img:nth-child(2) {
+//   display: none;
+// }
+// .slick-dots li.slick-active img:nth-child(1) {
+//   display: none;
+// }
+// .slick-dots li.slick-active img:nth-child(2) {
+//   display: block;
+// }
+
+/*********************************************************************************************************************\
+                                                  reusable components
+\*********************************************************************************************************************/
+// .wrapper {
+//   max-width: 1160px;
+//   margin: 0 auto;
+//   @media (max-width: 1200px) {
+//     max-width: 90%;
+//   }
+// }
+/*********************************************************************************************************************\
+                                                  Header
+\*********************************************************************************************************************/

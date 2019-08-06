@@ -113,6 +113,25 @@ body::-webkit-scrollbar-button {
     font-size: 26px;
   }
 }
+.input__text-styles {
+  @include text("ProbaPro", 20px, 300, normal, left, #000000, 0);
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  &:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &::-moz-placeholder {
+    line-height: 46px !important;
+  }
+  &::-webkit-input-placeholder {
+    line-height: 46px !important;
+  }
+  &:-ms-input-placeholder {
+    line-height: 46px !important;
+  }
+}
 /*********************************************************************************************************************\
                                                   Loader
 \*********************************************************************************************************************/
@@ -479,4 +498,184 @@ header {
 }
 /*********************************************************************************************************************\
                                                   Contact-us
+\*********************************************************************************************************************/
+.contact-us {
+  padding: 95px 0 50px;
+  @media (max-width: 768px) {
+    padding-top: 40px;
+  }
+}
+.contact {
+  @include displayFlex(flex, column, space-between, center);
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
+}
+.contact__container {
+  width: 1010px;
+  margin-top: 80px;
+  @include displayFlex(flex, row, space-between, center);
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+}
+.contact__form-container {
+  width: 100%;
+  @include displayFlex(flex, row, space-around, center);
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+}
+.contact__form {
+  width: 500px;
+  height: 360px;
+  input::placeholder,
+  textarea::placeholder {
+    opacity: 0.6;
+    @include text("ProbaPro", 20px, 300, normal, left, #000000, 0);
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+  }
+  @include displayFlex(flex, column, space-between, center);
+  @media (max-width: 1024px) {
+    width: 90%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  @media (max-width: 480px) {
+    height: 420px;
+  }
+  @media (max-width: 360px) {
+    height: 440px;
+  }
+}
+.contact__form-inputs {
+  width: 100%;
+  @include displayFlex(flex, row, space-between, center);
+  @media (max-width: 480px) {
+    height: 110px;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+.contact__input-wrapper {
+  width: 47%;
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+}
+.contact__single-input {
+  width: 100%;
+  height: 50px;
+  border: solid 1px #000000;
+  background-color: #ffffff;
+  padding-left: 30px;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+}
+.contact__form-mail {
+  width: 100%;
+}
+.contact__form-email {
+  width: 100%;
+  height: 50px;
+  border: solid 1px #000000;
+  background-color: #ffffff;
+  padding-left: 30px;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+}
+.contact__form-textarea {
+  width: 100%;
+}
+.contact__form-area {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  padding: 15px 10px 15px 30px;
+  border: solid 1px #000000;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+}
+.contact__form-button {
+  width: 280px;
+  height: 50px;
+  cursor: pointer;
+  outline: none;
+  border-style: none;
+  border-radius: 25px;
+  box-shadow: 0 0 6px 0 rgba(244, 180, 59, 0.51);
+  background-color: #f4b43b;
+  @include text("ProbaPro", 20px, 300, normal, center, #000000, 0);
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+.contact__info {
+  width: 340px;
+  height: 240px;
+  margin-bottom: 80px;
+  @include displayFlex(flex, column, space-around, 0);
+  @media (max-width: 960px) {
+    width: 36%;
+  }
+  @media (max-width: 768px) {
+    width: 310px;
+    height: 180px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  @media (max-width: 480px) {
+    width: 230px;
+  }
+}
+.contact__info-field {
+  @include displayFlex(flex, row, 0, center);
+  &:last-child {
+    padding-left: 5px;
+  }
+}
+.contact__info-link {
+  display: block;
+  margin-left: 25px;
+  @include text("ProbaPro", 20px, 300, normal, left, #000000, 0);
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  @media (max-width: 960px) {
+    font-size: 16px;
+    margin-left: 20px;
+  }
+  @media (max-width: 768px) {
+    font-size: 15px;
+    margin-left: 60px;
+  }
+  @media (max-width: 480px) {
+    font-size: 14px;
+    margin-left: 20px;
+  }
+}
+/*********************************************************************************************************************\
+                                                  Footer
 \*********************************************************************************************************************/

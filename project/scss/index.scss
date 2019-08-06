@@ -57,9 +57,12 @@ body::-webkit-scrollbar-button {
   display: none;
 }
 // /** ----- Main - padding for fixed footer ----- **/
-// main {
-//   padding: 0 0 0;
-// }
+main {
+  padding-bottom: 103px;
+  @media (max-width: 960px) {
+    padding-bottom: 210px;
+  }
+}
 /*********************************************************************************************************************\
                                                   Keyframes
 \*********************************************************************************************************************/
@@ -679,3 +682,57 @@ header {
 /*********************************************************************************************************************\
                                                   Footer
 \*********************************************************************************************************************/
+footer {
+  width: 100%;
+  padding: 15px 0;
+  position: absolute;
+  bottom: 0;
+  background: #e5e5e5;
+  @include displayFlex(flex, row, center, center);
+  @media (max-width: 960px) {
+    padding: 25px 0;
+  }
+}
+.footer__wrapper {
+  width: 70%;
+  @include displayFlex(flex, row, space-between, center);
+  @media (max-width: 1200px) {
+    width: 90%;
+  }
+  @media (max-width: 960px) {
+    flex-direction: column;
+    min-height: 160px;
+  }
+}
+.footer__social {
+  min-width: 180px;
+  @include displayFlex(flex, row, space-between, center);
+}
+.footer__social-link {
+  font-size: 20px;
+  color: #000000;
+  &:hover {
+    color: #f4b43b;
+  }
+}
+.footer__info {
+  @media (max-width: 480px) {
+    display: flex;
+  }
+}
+.footer__info-text {
+  opacity: 0.5;
+  @include text("ProbaPro", 19px, 300, normal, left, #000000, capitalize);
+  font-stretch: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  @media (max-width: 960px) {
+    text-align: center;
+    font-size: 15px;
+  }
+}
+.footer__urich-logo {
+  @media (max-width: 960px) {
+    height: 50px;
+  }
+}

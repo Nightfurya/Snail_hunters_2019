@@ -103,6 +103,16 @@ body::-webkit-scrollbar-button {
     width: 90%;
   }
 }
+.title {
+  position: relative;
+  @include text("ProbaPro", 30px, bold, normal, center, #000000, uppercase);
+  font-stretch: normal;
+  line-height: 0.8;
+  letter-spacing: normal;
+  @media (max-width: 480px) {
+    font-size: 26px;
+  }
+}
 /*********************************************************************************************************************\
                                                   Loader
 \*********************************************************************************************************************/
@@ -353,16 +363,6 @@ header {
 .order {
   @include displayFlex(flex, column, space-between, center);
 }
-.order__title {
-  position: relative;
-  @include text("ProbaPro", 30px, bold, normal, center, #000000, uppercase);
-  font-stretch: normal;
-  line-height: 0.8;
-  letter-spacing: normal;
-  @media (max-width: 480px) {
-    font-size: 26px;
-  }
-}
 .order__dishes {
   width: 990px;
   padding: 20px 0;
@@ -418,4 +418,65 @@ header {
 }
 /*********************************************************************************************************************\
                                                   Snacks
+\*********************************************************************************************************************/
+.about__snacks {
+  padding: 35px 0;
+}
+.taste {
+  @include displayFlex(flex, column, space-between, center);
+  @media (min-width: 1440px) {
+    margin-top: 0px;
+  }
+  @media (max-width: 480px) {
+    margin-top: 50px;
+  }
+}
+.taste__title-container {
+  @include displayFlex(flex, column, center, center);
+}
+.taste__iframe-container {
+  width: 650px;
+  margin: 70px 0 0;
+  @include displayFlex(flex, row, space-between, center);
+  @media (max-width: 1024px) {
+    width: 70%;
+  }
+  @media (max-width: 600px) {
+    width: 80%;
+  }
+  @media (max-width: 850px) {
+    margin: 40px 0 0;
+    flex-direction: column;
+  }
+}
+.taste__iframe-video {
+  height: 470px;
+  @include displayFlex(flex, column, space-between, center);
+  @media (max-width: 850px) {
+    margin: 0 0 30px;
+  }
+}
+.taste__iframe {
+  width: 280px;
+  height: 410px;
+}
+.taste__iframe-link {
+  @include text("ProbaPro", 20px, 300, normal, center, #000000, uppercase);
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  &:hover {
+    color: #f4b43b;
+  }
+}
+.taste__dishes-description {
+  width: 80%;
+  margin: 25px 0 0;
+  @include text("ProbaPro", 18px, 300, normal, justify, #000000, 0);
+  font-stretch: normal;
+  line-height: 1.3;
+  letter-spacing: normal;
+}
+/*********************************************************************************************************************\
+                                                  Contact-us
 \*********************************************************************************************************************/

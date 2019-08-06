@@ -31,7 +31,16 @@ p {
 img {
   vertical-align: middle;
 }
-// /** ----- Chrome - scroll ----- **/
+.row-active-big:after {
+  content: "";
+  width: 98px;
+  height: 9px;
+  position: absolute;
+  background-image: url(../assets/vawe-row__big.jpg);
+  bottom: -20px;
+  left: calc(50% - 49px);
+}
+/** ----- Chrome - scroll ----- **/
 body::-webkit-scrollbar {
   background-color: #fff;
   width: 16px;
@@ -47,6 +56,10 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-button {
   display: none;
 }
+// /** ----- Main - padding for fixed footer ----- **/
+// main {
+//   padding: 0 0 0;
+// }
 /*********************************************************************************************************************\
                                                   Keyframes
 \*********************************************************************************************************************/
@@ -333,4 +346,76 @@ header {
 }
 /*********************************************************************************************************************\
                                                   Order
+\*********************************************************************************************************************/
+.about__order {
+  padding: 35px 0 0;
+}
+.order {
+  @include displayFlex(flex, column, space-between, center);
+}
+.order__title {
+  position: relative;
+  @include text("ProbaPro", 30px, bold, normal, center, #000000, uppercase);
+  font-stretch: normal;
+  line-height: 0.8;
+  letter-spacing: normal;
+  @media (max-width: 480px) {
+    font-size: 26px;
+  }
+}
+.order__dishes {
+  width: 990px;
+  padding: 20px 0;
+  @include displayFlex(flex, row, space-between, center);
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    width: 70%;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 600px) {
+    width: 96%;
+  }
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+}
+.order__dishes-option-container {
+  width: 185px;
+  height: 235px;
+  @media (max-width: 480px) {
+    height: 204px;
+    margin: 0 0 15px;
+  }
+  @include displayFlex(flex, column, space-between, center);
+}
+.order__dishes-option {
+  height: 185px;
+  @include displayFlex(flex, column, flex-end, center);
+  @media (max-width: 480px) {
+    justify-content: center;
+  }
+  .order__dishes-option-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+.order__dishes-option-link {
+  @include text("ProbaPro", 20px, 300, normal, center, #000000, 0);
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover {
+    color: #f4b43b;
+  }
+  @media (max-width: 960px) {
+    font-size: 17px;
+  }
+}
+/*********************************************************************************************************************\
+                                                  Snacks
 \*********************************************************************************************************************/

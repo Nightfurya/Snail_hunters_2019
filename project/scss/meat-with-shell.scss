@@ -8,13 +8,17 @@
                                                   Slider's section
 \*********************************************************************************************************************/
 .categories {
-  padding-top: 95px;
+  padding-top: 40px;
   @media (max-width: 768px) {
     padding-top: 40px;
   }
   .three-blocks-row {
     @media (min-width: 1600px) {
       width: 60%;
+    }
+    .categories__option {
+      margin: 10px 40px;
+      justify-content: space-around;
     }
   }
 }
@@ -28,7 +32,7 @@
 .categories__option {
   width: 400px;
   height: 485px;
-  margin: 10px 40px;
+  margin: 10px 0;
   @include displayFlex(flex, column, space-between, center);
   @media (max-width: 1700px) {
     margin-bottom: 15px;
@@ -98,4 +102,19 @@
 }
 .text__meat-caviar {
   width: 500px;
+}
+/*********************************************************************************************************************\
+                                                  Escargot
+\*********************************************************************************************************************/
+.categories__big {
+  .categories__option {
+    @media (max-width: 420px) {
+      height: 485px;
+    }
+  }
+  .categories__info {
+    @media (max-width: 420px) {
+      height: auto;
+    }
+  }
 }

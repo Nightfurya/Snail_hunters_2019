@@ -1,8 +1,9 @@
 @import "_fonts-ProbaPro.scss";
 @import "_mixins-fonts.scss";
-@import "normalize";
-@import "slick";
 
+/*********************************************************************************************************************\
+                                                  Meat with shell
+\*********************************************************************************************************************/
 /*********************************************************************************************************************\
                                                   Slider's section
 \*********************************************************************************************************************/
@@ -64,8 +65,10 @@
   padding: 60px 0;
   @include displayFlex(flex, row, center, center);
 }
-.description__text {
+.description__container {
   width: 762px;
+}
+.description__text {
   padding: 10px 0;
   margin: 0;
   @include text("ProbaPro", 18px, 300, normal, justify, rgba(#000000, 0.75), 0);
@@ -82,4 +85,17 @@
   font-size: 20px;
   font-weight: 500;
   text-align: center;
+}
+/*********************************************************************************************************************\
+                                                  Meat
+\*********************************************************************************************************************/
+.categories__wrapper-meat-caviar {
+  @include displayFlex(flex, row, space-around, 0);
+  flex-wrap: wrap;
+  @media (max-width: 772px) {
+    justify-content: center;
+  }
+}
+.text__meat-caviar {
+  width: 500px;
 }

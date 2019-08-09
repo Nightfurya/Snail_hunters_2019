@@ -1,0 +1,85 @@
+@import "_fonts-ProbaPro.scss";
+@import "_mixins-fonts.scss";
+@import "normalize";
+@import "slick";
+
+/*********************************************************************************************************************\
+                                                  Slider's section
+\*********************************************************************************************************************/
+.categories {
+  padding-top: 95px;
+  @media (max-width: 768px) {
+    padding-top: 40px;
+  }
+  .three-blocks-row {
+    @media (min-width: 1600px) {
+      width: 60%;
+    }
+  }
+}
+.categories__wrapper {
+  @include displayFlex(flex, row, space-around, center);
+  flex-wrap: wrap;
+  @media (max-width: 772px) {
+    justify-content: center;
+  }
+}
+.categories__option {
+  width: 400px;
+  height: 485px;
+  margin: 10px 40px;
+  @include displayFlex(flex, column, space-between, center);
+  @media (max-width: 1700px) {
+    margin-bottom: 15px;
+  }
+  @media (max-width: 420px) {
+    width: 267px;
+    height: 392px;
+  }
+}
+.categories__option:hover .slick-arrow {
+  display: block !important;
+}
+.categories__info {
+  height: 130px;
+  @include displayFlex(flex, column, space-around, center);
+}
+.categories__info-main {
+  @include text("ProbaPro", 20px, 300, normal, center, #000000, 0);
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+.info-weight {
+  font-style: italic;
+}
+.info-price {
+  font-size: 30px;
+  font-weight: bold;
+}
+/*********************************************************************************************************************\
+                                                  Description
+\*********************************************************************************************************************/
+.description {
+  padding: 60px 0;
+  @include displayFlex(flex, row, center, center);
+}
+.description__text {
+  width: 762px;
+  padding: 10px 0;
+  margin: 0;
+  @include text("ProbaPro", 18px, 300, normal, justify, rgba(#000000, 0.75), 0);
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  @media (max-width: 768px) {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.description__title {
+  padding: 0;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}

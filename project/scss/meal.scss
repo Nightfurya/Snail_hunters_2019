@@ -1,0 +1,78 @@
+@import "_fonts-ProbaPro.scss";
+@import "_mixins-fonts.scss";
+
+/*********************************************************************************************************************\
+                                                  dishes page
+\*********************************************************************************************************************/
+.meal__container {
+  width: 762px;
+  margin: 0 auto;
+  padding: 40px 15px;
+  @include displayFlex(flex, column, space-between, center);
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+  @media (max-width: 480px) {
+    width: 98%;
+  }
+}
+.info__container {
+  width: 100%;
+  margin-bottom: 60px;
+  &:last-child {
+    margin-bottom: 1px;
+  }
+  @include displayFlex(flex, row, space-between, 0);
+  @media (max-width: 768px) {
+    width: 465px;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+}
+.info__image {
+  width: 267px;
+  height: 169px;
+}
+.info__container-text {
+  width: 430px;
+  @include displayFlex(flex, column, space-between, 0);
+  @media (max-width: 768px) {
+    margin-top: 30px;
+  }
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+}
+.info__title-text {
+  margin-bottom: 30px;
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+.info__title-link {
+  display: block;
+  position: relative;
+  @include text("ProbaPro", 30px, bold, normal, left, #000000, uppercase);
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  &:hover {
+    color: #f4b43b;
+  }
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
+}
+.info__overview {
+  margin-top: 0;
+  opacity: 0.65;
+  font-size: 20px;
+  font-weight: 300;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}

@@ -40,6 +40,13 @@ img {
   bottom: -20px;
   left: calc(50% - 49px);
 }
+.row__drinks:after {
+  bottom: -15px;
+  left: 0;
+  @media (max-width: 768px) {
+    left: calc(50% - 49px);
+  }
+}
 /** ----- Chrome - scroll ----- **/
 body::-webkit-scrollbar {
   background-color: #fff;
@@ -172,6 +179,11 @@ main {
   @media (max-width: 420px) {
     width: 267px;
   }
+}
+.read_more {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #f4b43b;
 }
 /*********************************************************************************************************************\
                                                   Loader

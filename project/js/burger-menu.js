@@ -3,13 +3,13 @@ $(document).on("DOMContentLoaded", () => {
   let burgerMenu = $(".navigation__media");
   let burgerMenuOption = $(".navigation__media-li");
 
-  // кнопка бургер меню
+  // burger button
   cross.on("click", () => {
     cross.toggleClass("open");
     burgerMenu.toggleClass("hidden");
   });
 
-  // скрытие элемента burgerMenu по клику на одну из опций
+  // hide burger-menu by clicking on burger button
   burgerMenuOption.on("click", () => {
     cross.toggleClass("open");
     burgerMenu.toggleClass("hidden");

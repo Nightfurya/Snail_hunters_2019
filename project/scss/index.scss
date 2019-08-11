@@ -47,6 +47,9 @@ img {
     left: calc(50% - 49px);
   }
 }
+.row-active-small:after {
+  background-image: url(../assets/vawe-row__small.jpg);
+}
 /** ----- Chrome - scroll ----- **/
 body::-webkit-scrollbar {
   background-color: #fff;
